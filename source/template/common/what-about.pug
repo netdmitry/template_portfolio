@@ -1,0 +1,42 @@
+section.reviews
+	.svg-heading
+		h1.svg-heading__text.revh1 Что обо мне говорят
+		svg.svg-heading__img
+			use(xlink:href="assets/img/sprite.svg#about_header")
+	
+	ul.reviews__list
+		li.reviews__item
+			blockquote(class="reviews__text") Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+			.reviews__send
+				.reviews__send_photo
+					img.reviews__img(src="../assets/img/kovalchuk.png" alt="Ковальчук Дмитрий")
+				.reviews__send_user
+					p.reviews__send_user-name Ковальчук Дмитрий
+					p.reviews__send_user-work основатель LoftSchool
+		li.reviews__item
+			blockquote(class="reviews__text") Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+			.reviews__send
+				.reviews__send_photo
+					img.reviews__img(src="../assets/img/zar.png" alt="Зар Захаров")
+				.reviews__send_user
+					p.reviews__send_user-name Зар Захаров
+					p.reviews__send_user-work преподаватель
+	.contact-form
+		form.contact(id="form-login" novalidate)
+			.contact-form__bg
+			.contact-form__content
+				h3.contact-form__heading.two-dot Связаться со мной
+				input(type="hidden" name="project_name" value="Портфолио Ремыгин")
+				input(type="hidden" name="admin_email" value="remygin@gmail.com")
+				input(type="hidden" name="form_subject" value="Заявка с нижней формы")
+				input(data-content="Введите свое имя" type="text" name="name" placeholder="Имя" data-check="username" class="contact-form__field" id="login")
+				input(data-content="Email имеет не верный формат" type="email" name="email" placeholder="Email" data-check="email" class="contact-form__field" id="password")
+				textarea(data-content="Ваше сообщение должно быть не короче 10 символов" name="message" placeholder="Ваше сообщение" data-check="text" class="contact-form__field contact-form__field_textarea" id="about")
+			ul.form-buttons
+				li.form-buttons__button
+					button(id="Submit").form-buttons__button-content Отправить
+				li.form-buttons__button
+					button.form-buttons__button-content(id="Reset" type="reset") Очистить
+
+
+

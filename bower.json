@@ -1,0 +1,14 @@
+{
+  "name": "loftschool-builder",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "font-awesome": "fontawesome#^4.6.3",
+    "qtip2": "^2.2.1"
+  }
+}

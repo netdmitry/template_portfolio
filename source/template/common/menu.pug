@@ -1,0 +1,19 @@
+-
+	var mwLinks = [
+	{name:'Мои работы',
+	href:'my-works.html'},
+	{name:'Обо мне',
+	href:'about_me.html'},
+	{name:'Блог',
+	href:'blog.html'},
+	{name:'Главная',
+	href:'/'}
+
+	]
+
+.overlay(id="overlay")
+	nav.overlay-menu
+		ul
+			each link in mwLinks
+				li
+					a(href=link.href)= link.name

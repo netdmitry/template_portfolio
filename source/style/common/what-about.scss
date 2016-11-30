@@ -1,0 +1,389 @@
+.qtip.qtip canvas {
+        background-color: transparent !important;
+        border: 0px !important;
+        width: 20px;
+        height: 20px;
+        transform: rotate(225deg);
+        left: 15px;
+        top: -1px;
+}
+
+.qtip-content {
+    color: #fff;
+    font-weight: 600;
+}
+
+.qtip-default{
+    background: #d50000;
+    font-size: 15px;
+    padding: 5px 5px;
+    line-height: 1.5;
+    color: #d50000;
+    border: 1px solid red;
+
+
+}
+.error {
+        position: absolute;
+  background: #f60000;
+        border: 3px solid #d50000;
+}
+.correct {
+        position: absolute;
+  background: #56d800;
+        border: 3px solid #008000;
+}
+.wrong {
+        
+  font-weight: bold;
+        color: #e90000;
+}
+.normal {
+        font-weight: normal;
+        color: #222;
+}
+.reviews {
+    background-color: #f0e6d2;
+    text-align: center;
+    background-image: url(../img/bg_footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+    padding-top: 44px;
+    background-position: top center;
+    padding-bottom: 165px;
+    
+    @include laptop {
+        margin-top: 0;
+    }
+    @include tablets {
+        margin-top: 0%;
+        height: 100%;
+        padding-bottom: 360px;
+    }
+    @include phones {
+        height: 173%;
+    }
+    
+}
+.reviews__img {
+    max-width: 100%;
+}
+.svg-heading .svg-heading__text {
+    position: relative;
+    width: 380px;
+    z-index: 3;
+    
+    @include phones {
+        max-width: 235px;
+        width: 100%;
+    }
+
+    @include tablets {
+        width: 100%;
+    }
+}
+.svg-heading {
+    position: relative;
+    display: block;
+    padding:  15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.reviews__list {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 83px auto;
+    max-width: 763px;
+    text-align: center;
+    margin-bottom: 0;
+    @include laptop {
+        margin: 5% auto;
+    }
+    @include tablets {
+        margin: 5% 9%;
+    }
+    @include phones {
+        width: 90%;
+        margin: 15% auto;
+    }
+}
+
+.reviews__item {
+    position: relative;
+    float: left;
+    vertical-align: top;
+    margin-right: 37px;
+    width: 363px;
+    margin-bottom: 35px;
+    text-align: left;
+    @include tablets {
+        margin-bottom: 40px;
+        width: 100%;
+        
+        }
+    @include phones {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0;
+    }
+}
+
+.reviews__text::before {
+    content: " ";
+    background: url("../img/kov.png") no-repeat;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: -45px;
+   
+
+}
+
+.reviews__item:last-child {
+    margin-right: 0;
+}
+
+.reviews__list:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.reviews:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.reviews__text {
+    color: #5d5a55;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 27px;
+    margin-left: 3%;
+    width: 383px;
+   @include tablets {
+    width: 100%;
+    margin-left: 0px;
+   }
+    @include phones {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+}
+
+.reviews__send {
+	@include clearfix;
+    text-align: left;
+    vertical-align: middle;
+    @include tablets {
+        margin-left: 0px;
+    }
+}
+.reviews__send_photo {
+    max-width: 71px;
+    max-height: 71px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 22px;
+    display: inline-block;
+    @include tablets {
+        float: left;
+    }
+}
+
+.reviews__send_user {
+   	float: right;
+   	width: 280px;  
+    max-width: 265px;
+    color: #cd8920;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 12px;
+    @include tablets {
+        float: none;
+    }
+    p {
+    	margin: 0;
+    }
+}
+.reviews__send_user-name{
+    font-family: "Roboto-Bold"
+}
+
+.reviews__send_user-work {
+    font-family: "Roboto-Regular"
+}
+.reviews__send_user-name, .reviews__send_user-work {
+	 color: #cd8920;
+}
+
+.revh1:after {
+    content: '';
+    display: inline-block;
+    background-image: url(../img/tri_tochki.png);
+    background-position: 0 0;
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    margin-left: 76px;
+    margin-top: -7px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    @include phones {
+        margin-left: 52px;
+    }
+}
+
+.revh1:before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/tri_tochki.png);
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    margin-top: -7px;
+    background-position: 0 0;
+       
+    @include phones {
+        left: -34px;
+    }
+}
+
+
+
+// ФОРМА
+.contact-form {
+ 
+    display: block;
+	margin: 30px auto 0;
+	width: 380px;
+	max-width: 90%;
+	border-radius: 4px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 0 20px 0 rgba(69,90,100,.2);
+}
+.contact-form__bg {
+	position: absolute;
+    background: url('../img/bg_footer.png') center no-repeat;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    filter: blur(5px);
+    
+
+	
+}
+.contact-form__content {
+    position: relative;
+    padding: 0 20px;
+    background: 0 0;
+}
+.form-buttons {
+    padding: 0;
+    margin: 20px 0 0 0;
+    list-style: none;
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.form-buttons__button {
+    display: table-cell;
+    border-right: 2px solid #e2c58c;
+}
+.form-buttons__button:last-child {
+    border: none;
+}
+.form-buttons__button {
+    width: 50%;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: 0 0;
+    cursor: pointer;
+}
+.form-buttons__button-content {
+    font-family: "Roboto-Medium";
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px 12px;
+    color: #fff;
+    background-color: #e7a731;
+    text-decoration: none;
+    &:hover {
+        background-color: #cd8920;
+    }
+    
+}
+.contact-form__heading {
+    padding: 30px 0 0;
+    font-family: 'SansusWebissimo';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.two-dot:after {
+    right: -5px;
+}
+.two-dot:before {
+    left: -5px;
+}
+h3 {
+    font-size: 2.1875em;
+}
+.contact-form__field {
+    border-radius: 5px;
+    display: block;
+    margin: 27px auto -4px 0;
+    height: 10px;
+    padding: 17px;
+    border: 0;
+    width: 90%;
+    outline: 0;
+    background-color: #fff;
+    &.has-error {
+        color: #d50000;
+        border: 3px solid #d50000; 
+    }
+   
+}
+.contact-form__content {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    background: 0 0;
+}
+.contact-form__field_textarea {
+    height: 105px;
+    resize: none;
+}
+
+// ФОРМА - КОНЕЦ
+
+
+.contact-form__heading.two-dot {
+    &:after,
+    &:before {
+        top: 78%;
+    }
+}

@@ -1,0 +1,61 @@
+.skills__group{
+    margin-bottom: 50px;
+}
+.group__title {
+    font-size: 1.75em;
+    color: #373e42;
+    margin: 10px 0 15px;
+    display: block;
+    padding: 12px;
+
+    
+}
+
+.item-title {
+    font-weight: 400;
+    font-family: 'Roboto-Medium';
+}
+.group__skills {
+    margin-top: -18px;
+    padding: 0;
+    margin-bottom: -11px;
+}
+.group__item:first-child {
+    margin-left: 0;
+}
+.group__item {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    margin: 10px 0;
+    margin-left: 30px;
+    @include laptop {
+        margin-left: 15px;
+    }
+    .item-title {
+    	position: absolute;
+    	width: 120px;
+    	padding: 0px;
+    	color: #e7a731;
+    	top: 50%;
+    	-webkit-transform: translateY(-140%);
+    	-ms-transform: translateY(-140%);
+    	transform: translateY(-140%);
+	}
+}
+
+.piechart__bg {
+	stroke: #d0d2d2; 
+	stroke-dashoffset: 0;
+}
+
+.piechart {
+    width: 120px;
+    height: 120px;
+}
+
+.piechart__fill {
+    stroke: #e7a731;
+    transition: stroke-dashoffset 3.2s linear;
+}

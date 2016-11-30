@@ -1,0 +1,257 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+// body {
+//     margin: 0 0 150px; // нижний margin равен высоте футера
+// }
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 190px;
+    width: 100%;
+    height: 246px;
+    @include tablets {
+   		bottom: 190px;	
+   	}
+   	@include phones {
+   		bottom: 190px;
+   	}
+    
+   
+}
+
+.footer {
+
+	&-wrapper {
+		background-color: rgba(55,62,66,.85);
+    	color: #fff;
+    	text-align: center;
+    	display: flex;
+		flex-direction: row;
+   		justify-content: center;
+   		height: 150px;
+   		@include tablets {
+   			height: 210px;
+   		}
+   		@include phones {
+   			height: 350px;
+   		}
+   	}
+
+	&-row {
+		display: block;
+		width: 100%;
+		padding: 30px;
+		@include clearfix
+		@include laptop {
+			padding: 25px;
+		}
+		@include tablets {
+			padding: 10px;
+		}
+		&:last-child {
+			border: none;
+		} }
+	&-column {
+		width: 30%;
+		float: left;
+
+		&-left {
+			width: 30%;
+			text-align: left;
+			line-height: 1.5;
+			border-right: 1px solid #fff;
+			@include laptop {
+				width: 30%;
+				line-height: 1.3;
+			}
+			@include tablets {
+   				width: 100%;
+   				text-align: center;
+   				border: none;
+   			}
+
+		}
+		&-center {
+			width: 39%;
+			text-align: left;
+			
+			font-family: "Roboto-Medium";
+			border-right: 1px solid #fff ;
+			@include laptop {
+				width: 39%;
+				margin-left: 0;
+
+			}
+			@include tablets {
+   				width: 66%;
+   				margin-top: 10px;
+   			}
+   			@include phones {
+   				width: 100%;
+   			}
+				
+		}
+		&-right {
+			line-height: 1;
+			font-family: "Roboto-Light";
+			width: 30%;
+			text-align: left;
+			margin-top: 0;
+			
+			@include tablets {
+   				width: 33%;
+   				text-align: right;
+   			}
+   			@include phones {
+   				width: 100%;
+   				margin-top: 7px;
+   				padding-left: 0;
+   				text-align: center;
+   			}
+			
+		}
+	}
+	.socials-header {
+		opacity: 0.5;
+	}
+	.socials-link {
+		position: relative;
+		margin: -10px;
+		margin-top: 25px;
+		padding: 0;
+	}
+	
+	
+	&-link:hover {
+		color: #e7a731;
+	}
+	&-link {
+		position: relative;
+		color: #fff;
+		text-decoration: none;
+		
+		padding: 10px 0;
+		vertical-align: middle;
+		&__item{
+			display: inline-block;
+			margin-left: 23px;
+			@include laptop {
+				margin-left: 18px;
+			}
+			@include phones {
+				margin: 5px 5px;
+    			font-size: 14px;
+			}
+
+		}
+		&__list {
+			padding: 0;
+			margin-top: 0;
+			margin-left: 60px;
+			@include laptop {
+				margin-left: 0px;
+			}
+			@include tablets {
+
+			}
+			@include phones {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+	.footer-info {
+		opacity: 0.5;
+		color: #fff;
+		line-height: 1;
+		margin-top: 10px;
+		margin-left: 30px;
+		@include laptop {
+			margin-bottom: 0;
+		}
+		@include tablets {
+			margin-top: 0px;
+			line-height: 1.1;
+			margin-left: 10px;
+		}
+		@include phones {
+			
+			line-height: 1.3;
+			
+		}
+		&:first-child {
+			margin-top: 0;
+			@include laptop {
+				
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.copyright {
+	font-family: "Roboto-Light";
+	opacity: 0.5;
+	color: #fff;
+	width: 100%;
+	margin: 0;
+	@include laptop {
+		width: 91%;
+	}
+
+	&_slogan {
+		opacity: 1;}
+	
+}
+
+.footer-column .socials__list {
+	padding: 0;
+	margin-bottom: 0;
+	margin-top: 34px;
+	margin-left: 59px;
+	@include laptop {
+		margin-left: 26px;
+	}
+}
+
+.footer-link__item:first-child {
+	margin: 0;
+	@include laptop {
+		margin-left: 26px;
+	}
+}
+
+.footer-column .socials__list {
+	margin-top: 30px;
+	@include phones {
+		margin: 0 67px;
+	}
+
+}
+
+.social__svg {
+	width: 28px;
+}
+
+
+.fa.TopSvg {
+	display: block;
+    position: relative;
+    margin: 70px auto;
+    width: 100%;
+    height: 50px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(0,0,0,.5);
+    color: #fff;
+    opacity: .7;
+    transition: all .3s;
+    padding: 0;
+
+ }

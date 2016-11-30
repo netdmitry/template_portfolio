@@ -1,0 +1,16 @@
+-
+	var socialLinks = [
+	{name:'vk',
+	href:'https://vk.com/d_sameah'},
+	{name:'github',
+	href:'https://github.com/netdmitry'},
+	{name:'in',
+	href:'https://www.linkedin.com/in/dmitry-shapira-aa098b12a'}
+	];
+
+ul.socials__list
+	each link in socialLinks
+		li.socials__item
+			a(href=link.href class='socials__link' target="_blank")
+				svg(class='social__svg')
+					use(xlink:href="assets/img/sprite.svg#" + link.name)

@@ -1,0 +1,103 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title Admin panel
+    link(rel='stylesheet', href='style.css')
+  body
+    .block__header
+      .title__header
+        | Панель администрирования
+        a(href='/') Вернуться на сайт
+    .block__tab
+      .tabs
+        input#tab1(type='radio', name='tabs', checked='')
+        label(for='tab1', title='Вкладка 1') Вкладка 1
+        input#tab2(type='radio', name='tabs')
+        label(for='tab2', title='Вкладка 2') Вкладка 2
+        input#tab3(type='radio', name='tabs')
+        label(for='tab3', title='Вкладка 3') Вкладка 3
+        input#tab4(type='radio', name='tabs')
+        label(for='tab4', title='Вкладка 4') Вкладка 4
+        section#content1
+          h1 Страница «Обо мне»
+          .block_about
+            .left
+              h3 Frontend
+              p
+                | Html   
+                input(type='text', value='80')
+                |  %
+              p
+                | CSS    
+                input(type='text', value='80')
+                |  %
+              p
+                | Javascript 
+                input(type='text', value='80')
+                |  %
+            .center
+              h3 Backend
+              p
+                | PHP     
+                input(type='text', value='80')
+                |  %
+              p
+                | MySQL  
+                input(type='text', value='80')
+                |  %
+              p
+                | Node.js  
+                input(type='text', value='80')
+                |  %
+              p
+                | Mongo.db  
+                input(type='text', value='80')
+                |  %
+            .right
+              h3 Workflow
+              p
+                | Git    
+                input(type='text', value='80')
+                |  %
+              p
+                | Gulp     
+                input(type='text', value='80')
+                |  %
+              p
+                | Bower  
+                input(type='text', value='80')
+                |  %
+            .neeeee
+              button.submit(type='submit') Сохранить
+        section#content2.addblog
+          h1 Страница «Блог»
+          form.contact_form(action='#', method='post', name='contact_form')
+            ul
+              li
+                h2 Добавить запись
+              li
+                input(type='text', placeholder='Название', required='')
+              li
+                input(type='date', placeholder='Дата', required='')
+              li
+                textarea(name='message', placeholder='Содержание', cols='40', rows='6', required='')
+              li
+                button.submit(type='submit') Добавить
+        section#content3.addworks
+          h1 Страница «Мои работы»
+          form.contact_form(enctype='multipart/form-data', action='#', method='post')
+            ul
+              li
+                h2 Добавить работу
+              li
+                input(type='text', placeholder='Название проекта', required='')
+              li
+                input(type='text', placeholder='Технологии', required='')
+              li
+                input(type='url', name='website', placeholder='http://yoursite.com', required='', pattern='(http|https)://.+')
+              li
+                input.imgapp(type='file', name='photo', multiple='', accept='image/*,image/jpeg', required='')
+              li
+                button.submit(type='submit') Добавить
+        section#content4

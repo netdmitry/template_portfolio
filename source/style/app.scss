@@ -1,0 +1,140 @@
+.card_flipped {
+	position: fixed;
+}
+
+//preloader 
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	// background-image: url("../img/desert_prel_bg.jpg");
+	background:#e7a731;
+
+}
+
+.preloader__spinner {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.preloader__animation {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #fff;
+	position: relative;
+	animation: spin 2s linear infinite;
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #fff;
+
+	}
+
+	&:before {
+		top: 5px;
+		bottom: 5px;
+		left: 5px;
+		right: 5px;
+		animation: spin 3s linear infinite;
+	}
+	&:after {
+		top: 15px;
+		bottom: 15px;
+		left: 15px;
+		right: 15px;
+		animation: spin 1.5s linear infinite;
+	}
+}
+
+.preloader__counter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+	
+}
+
+
+
+
+h1, h2, h4, h5, h6 {
+    font-family: 'SansusWebissimo',sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+h3 {
+	font-size: 35px;
+	font-weight: 400;
+	margin: 0;
+	color: #5d5a55;
+	position: relative;
+}
+p {
+	font-family: 'Roboto-Regular';
+	font-size: 16px;
+	color: #373e42;
+}
+
+html, body {
+	margin: 0;
+}
+
+// base
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+
+
+// pages
+
+@import 'common/my-works';
+@import 'common/about-me';
+@import 'common/blog';
+@import 'common/_welcome';
+
+// common
+@import 'common/header';
+@import 'common/socials';
+@import 'common/footer';
+@import 'common/_my-card';
+@import 'common/myskills';
+@import 'common/map';
+@import 'common/slider-portf';
+@import 'common/what-about';
+@import 'common/menu';
+
+
+//slider
+@import 'common/slider/_nav';
+@import 'common/slider/_projects';
+@import 'common/slider/_preview';
+
+
+@import "../../bower_components/font-awesome/scss/font-awesome"
+

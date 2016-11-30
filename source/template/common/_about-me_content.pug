@@ -1,0 +1,30 @@
+svg(version='1.1', width='100%', height='150px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xml:space='preserve', viewbox='0 0 50 50', preserveaspectratio='none').triangle__left
+    polygon(points='0,0 0,130 100,100')
+svg(version='1.1', width='100%', height='150px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xml:space='preserve', viewbox='0 0 50 50', preserveaspectratio='none').triangle__right
+    polygon(points='100,100 0,50 50,0')
+section.about-me
+    .about-me__wrapper
+        .about-me__wrapper_left
+            .about-me__wr
+                .svg-heading
+                    h1.svg-heading__text.three-dot обо мне
+                    svg.svg-heading-img
+                        use(xlink:href="assets/img/sprite.svg#about_header")
+                .bio-block
+                    .bio-image
+                        img(src="/assets/img/foto_big.jpg" alt="Shapira Dmitry")
+                    .bio-text
+                        h3.bio-h3.two-dot Кто я
+                        .bio-about
+                            p Я веб разработчик из Белоруссии. Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+        .about-me__wrapper_right
+            .about-me__wr
+                h3.skills-heading.two-dot Чем я могу быть вам полезен
+                .skills-descr
+                    p Больше всего меня привлекает Backend, но я также знаком и могу писать на Frontend. Давайте по порядку...
+                include ../common/myskills
+
+
+

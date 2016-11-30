@@ -1,0 +1,34 @@
+-
+	var navLinks=[
+	{title:'Мои работы',
+	href:'my-works.html'
+	},
+	{title:'Обо мне',
+	href:'about_me.html'
+	},
+	{title:'Блог',
+	href:'blog.html'
+	},
+	{title:'Авторизация',
+	href:'index.html'}
+	]
+
+footer.footer
+	button(class="fa fa-chevron-up TopSvg")
+		
+	.footer-wrapper
+		.footer-row
+			.footer-column.footer-column-left
+				p.copyright.copyright_slogan Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
+				br
+				p.copyright © Dmitry Shapira | 2016
+			.footer-column.footer-column-center
+				ul.footer-link__list
+					each link in navLinks
+						li.footer-link__item
+							a(href=link.href class='footer-link')= link.title
+				include ../common/_socials
+			.footer-column.footer-column-right
+				p.footer-info Фрилансер веб-разработчик
+				p.footer-info Email: shapiro.net@gmail.com
+				p.footer-info Нелицензированное использование материалов данного сайта запрещено!

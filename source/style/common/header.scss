@@ -1,0 +1,297 @@
+.header {
+	text-align: center;
+	position: relative;
+	height: 100%;
+	min-height: 584px;
+	overflow: hidden;
+	background-image: url("/assets/img/header.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	
+	@include laptop {
+		min-height: 325px;
+	}
+
+	@include tablets {
+		height: 100%;
+	}
+
+	@include phones {}
+	
+
+}
+.header__links_left{
+	@include clearfix
+}
+.header__links_right{
+	@include clearfix
+}
+.table-box {
+	display: table;
+	width: 100%;
+}
+.table-box_row {
+	@include clearfix
+	display: table-row;
+	position: relative;
+}
+.header__top {
+	display: table-cell;
+    padding: 25px;
+    position: absolute;
+    width: 100%;
+    max-width: 1800px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.about__author {
+	position: relative;
+	z-index: 1;
+}
+.header__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-57%);
+    width: 90%;
+    height: 117%;
+    z-index: 0;
+    fill: #cd8920;
+    opacity: .10;
+}
+/* Блок социальных ссылок */
+.header__links_right-button {
+	float: right;
+	position: relative;
+	background: url("../img/humburger.png") no-repeat;
+	border: 0;
+	right: 30px;
+	padding: 0;
+	z-index: 10;
+	height: 40px;
+	width: 40px;
+	text-indent: -9999px;
+	overflow: hidden;
+	top: 3px;
+	@include phones {
+		background-size: 29px;
+		right: 5px;
+		top: -10px;
+	}
+}
+/* Блок социальных ссылок  - конец */
+
+/* Блок About-box - начало */
+.about__box {
+	height: 100%;
+
+
+}
+
+.about__box_author {
+	position: relative;
+	margin-top: 153px;
+	@include tablets {
+		margin-top: 20%;
+	}
+	@include phones {
+		margin-top: 40%;
+	}
+}
+.about__box_author-avatar {
+	margin: 20px auto;
+	width: 137px;
+	height: 137px;
+	border-radius: 50%;
+	overflow:hidden;
+	border: 2px solid #cd8920;
+	@include tablets {
+		margin: -35px auto;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+
+.about__box_author-name {
+	font-family: 'Roboto-Medium';
+	font-size: 2.1875em;
+	margin: 25px auto 10px;
+	color: #fff;
+	z-index: 3;
+	@include tablets {
+		margin: 58px auto 10px;
+	}
+}
+.about__box_author-descr {
+	font-family: 'Roboto-Light';
+	font-size: 1em;
+	line-height: 1;
+	margin: 0 auto;
+	color: #fff;
+	opacity: 0.8;
+	z-index: 3;
+	width: 100%;
+	max-width: 250px;
+}
+/* Блок About-box - конец */
+
+/* Свернул Развернул - начало */
+.Bottomsvg {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    bottom: -100%;
+    left: 50%;
+    margin-left: -13px;
+    transition: all 0.5s ease-in-out;
+	cursor: pointer;
+	z-index: 7;
+	@include phones {
+		margin-left: -20px;	
+	}
+	// &:hover {
+	// 	color: #000;
+	// 	transform: translate(0,50%);
+	// }
+}
+
+.Bottomsvg svg {
+    width: 26px;
+    fill: white;
+    opacity: .7;
+    height: 16px;
+    @include tablets {
+    	width: 40px;
+    	height: 40px;
+    }
+}
+
+.arrow {
+	display: block;
+}
+.arrow_down {
+	overflow: hidden;
+	fill: #fff;
+	position: absolute;
+	left: 49%;
+	bottom: -189px;
+	display: block;
+	height: 35px;
+	width: 44px;
+	text-indent: -9999px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+	opacity: 0.7;
+	&:hover {
+		color: #000;
+		transform: translate(0,100%);
+	}
+}
+
+
+
+
+
+/* Свернул Развернул - конец */
+
+/* Header Title - начало */
+.header-title {
+	background-color: #faf8f0;
+}
+
+
+.svg-heading-text {
+  position: relative;
+  width: 380px;
+  z-index: 3;
+  
+}
+/* Header Title - конец */
+
+
+// SVG
+.header-svg-corner {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    fill: #faf8f0;
+
+}
+
+.header-svg-corner_left {
+    left: 0;
+    right: auto;
+    width: 50%;
+    fill: #f0efe9;
+}
+
+.header-svg-corner_right {
+    right: 0;
+    left: auto;
+    width: 50%;
+    fill: #efebe0;
+}
+
+.triangle{
+ &__left{
+      width: 50%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      fill: #f0efe9;
+      @include tablets {
+      		
+      }
+      @include phones {
+      	bottom: -3px;
+      }
+
+    }
+ &__right{
+   width: 50%;
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   fill: #efebe0;
+	@include tablets {
+      	
+      	
+    }
+    @include phones {
+      	bottom: -3px;
+    }
+
+
+
+
+ }
+}
+
+
+.triangle__big {
+	position: absolute;
+    width: 100%;
+    height: 398px;
+    bottom: -23px;
+    left: 0;
+    right: 0;
+	fill: #faf8f0;
+	@include tablets {
+		height: 15%;
+	}
+	@include phones {
+	    bottom: -8px;
+    	height: 44px;
+	}
+}
+
+
+

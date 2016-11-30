@@ -1,0 +1,33 @@
+header.header(class="table-box")
+	.table-box_row
+		.header__top
+			.header__links_left
+				include ../common/_socials 
+			//- .header__links_right
+			//- 	button(id="menu-toggle" class="header__links_right-button") humburger
+			.button_container(id="toggle")
+				span.top
+				span.middle
+				span.bottom
+	
+
+	.table-box_row.about__box
+		.about__box_author
+			.about__author
+				.about__box_author-avatar
+					img(src="/assets/img/avatar.png" alt="Shapira Dmitry")
+				p.about__box_author-name Дмитрий Шапира 
+				p.about__box_author-descr Личный сайт веб разработчика
+			svg.header__svg
+				use(xlink:href="assets/img/sprite.svg#portfolio_header")
+			a(href="/").Bottomsvg
+				svg
+					use(xlink:href="assets/img/sprite.svg#arrow_down")
+			
+		//- svg.triangle__big(preserveAspectRatio="none" viewbox=" 0 0 2000 400")
+		//- 	use(xlink:href="assets/img/sprite.svg#bg")
+		
+		//- svg(version='1.1', width='100%', height='150px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xml:space='preserve', viewbox='0 0 50 50', preserveaspectratio='none').triangle__left
+		//- 	polygon(points='0,0 0,130 100,100')
+		//- svg(version='1.1', width='100%', height='150px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xml:space='preserve', viewbox='0 0 50 50', preserveaspectratio='none').triangle__right
+		//- 	polygon(points='100,100 0,50 50,0')

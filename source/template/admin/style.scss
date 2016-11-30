@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+}
+
+.block__header {
+  display: block;
+  float: left;
+  background: #00bfa5;
+  height: 70px;
+  width: 100%;
+}
+
+.title__header {
+  font-size: 24px;
+  color: #fff;
+  padding: 20px 0 20px 30px;
+  a {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 60%;
+    margin-top: -25px;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+/*TABS*/
+/* Базовый контейнер табов */
+
+.tabs {
+  /* min-width: 320px;
+   max-width: 800px;*/
+  padding: 0;
+  margin: 0;
+}
+
+/* стили секций с содержанием */
+
+section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  /*border: 1px solid #ddd;*/
+  p {
+    font-size: 20px;
+    /*font-weight: 700;*/
+  }
+}
+
+.tabs {
+  input {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    border-radius: 3px 3px 0 0;
+    &:hover {
+      color: #888;
+      cursor: pointer;
+    }
+  }
+  input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 1px solid #009933;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+  }
+}
+
+/* стили вкладок (табов) */
+/* изменения стиля заголовков вкладок при наведении */
+/* стили для активной вкладки */
+/* активация секций с помощью переключателя :checked */
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {
+  display: block;
+}
+
+/* медиа запросы для различных типов носителей */
+@media screen and (max-width: 1200px) {
+  .tabs label {
+    font-size: 16px;
+  }
+  .title__header a {
+    display: block;
+    margin-left: 80%;
+    margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs label {
+    font-size: 16px;
+  }
+  .title__header a {
+    display: block;
+    margin-left: 75%;
+    margin-top: -25px;
+  }
+  .neeeee {
+    margin-bottom: 60%;
+  }
+  .block_about {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .tabs label {
+    padding: 15px;
+    width: 90%;
+  }
+  .title__header {
+    margin-top: 5%;
+    font-size: 24px;
+    a {
+      display: block;
+      margin: 0 65px auto;
+      margin-top: -17%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tabs label {
+    padding: 15px;
+    width: 90%;
+  }
+  .title__header {
+    margin-top: 5%;
+    font-size: 22px;
+    a {
+      display: block;
+      margin: 0 50px auto;
+      margin-top: -17%;
+    }
+  }
+}
+
+/*END TABS*/
+
+.left, .center, .right {
+  width: 33%;
+  float: left;
+}
+
+/*обо мне*/
+
+.block_about {
+  p {
+    font-size: 16px;
+  }
+  input {
+    display: inline-block;
+    width: 30px;
+    margin-left: 10px;
+    text-align: center;
+    border-color: ivory;
+    outline: none;
+  }
+  button {
+    display: block;
+    float: left;
+    margin-top: 20%;
+    margin-left: -98%;
+    /*padding: 15px;
+    width: 235px;
+    cursor: pointer;
+    background: #00bfa5;
+    color: #fff;
+    font-size: 16px;*/
+  }
+}
+
+/*.block_about button:hover{
+	background: #046f60;
+	outline: none
+}*/
+
+.addblog input, .addworks input {
+  display: block;
+}
+
+/* === Remove input autofocus webkit === */
+
+*:focus {
+  outline: none;
+}
+
+/* === List Styles === */
+
+.contact_form {
+  ul {
+    width: 750px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+  }
+  li {
+    padding: 12px;
+    position: relative;
+  }
+  h2 {
+    margin: 0;
+    display: inline;
+  }
+}
+
+/* === Form Header === */
+
+.required_notification {
+  color: #d45252;
+  margin: 5px 0 0 0;
+  display: inline;
+  float: right;
+}
+
+/* === Form Elements === */
+
+.contact_form {
+  label {
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+  }
+  input {
+    display: block;
+    height: 20px;
+    width: 235px;
+    padding: 5px 8px;
+  }
+  textarea {
+    padding: 8px;
+    width: 500px;
+    height: 180px;
+  }
+  input, textarea {
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 2px;
+    padding-right: 30px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+  }
+  input:focus, textarea:focus {
+    background: #fff;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+    padding-right: 70px;
+  }
+  input:required, textarea:required {
+    background: #fff url(../images/red_asterisk.png) no-repeat 98% center;
+  }
+  input:required:valid, textarea:required:valid {
+    background: #fff url(../images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+  }
+  input:focus:invalid, textarea:focus:invalid {
+    background: #fff url(../images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+  }
+}
+
+/* form element visual styles */
+/* === HTML5 validation styles === */
+/* === Form hints === */
+
+.form_hint {
+  background: #d45252;
+  border-radius: 3px 3px 3px 3px;
+  color: white;
+  margin-left: 8px;
+  padding: 1px 6px;
+  z-index: 999;
+  /* hints stay above all other elements */
+  position: absolute;
+  /* allows proper formatting if hint is two lines */
+  display: none;
+  &::before {
+    content: "\25C0";
+    color: #d45252;
+    position: absolute;
+    top: 1px;
+    left: -6px;
+  }
+}
+
+.contact_form input {
+  &:focus + .form_hint {
+    display: inline;
+  }
+  &:required:valid + .form_hint {
+    background: #28921f;
+    &::before {
+      color: #28921f;
+    }
+  }
+}
+
+/* === Button Style === */
+
+button.submit {
+  background-color: #00bfa5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00bfa5), to(#00bfa5));
+  background: -webkit-linear-gradient(top, #00bfa5);
+  background: -moz-linear-gradient(top, #00bfa5);
+  background: -ms-linear-gradient(top, #00bfa5);
+  background: -o-linear-gradient(top, #00bfa5);
+  background: linear-gradient(top, #00bfa5);
+  border: 1px solid #509111;
+  border-bottom: 1px solid #5b992b;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #00bfa5;
+  -webkit-box-shadow: 0 1px 0 0 #00bfa5 inset;
+  -moz-box-shadow: 0 1px 0 0 #00bfa5 inset;
+  -ms-box-shadow: 0 1px 0 0 #00bfa5 inset;
+  -o-box-shadow: 0 1px 0 0 #00bfa5 inset;
+  color: white;
+  font-weight: bold;
+  padding: 6px 20px;
+  text-align: center;
+  text-shadow: 0 -1px 0 #396715;
+  &:hover {
+    opacity: .85;
+    cursor: pointer;
+  }
+  &:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow: 0 0 10px 5px #356b0b inset;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+  }
+}

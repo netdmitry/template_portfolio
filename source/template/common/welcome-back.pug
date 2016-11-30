@@ -1,0 +1,25 @@
+.welcome__banner
+    form.login(id="index-form")
+      .login-form
+        h3.sidestripes.two-dot Авторизуйтесь
+        label.login-form__label.login-form__label_text
+          input(data-content="Введите логин" placeholder="Логин" type="text" datacheck="username" name="username" class="input input_text" id="login")
+          span(class="fa fa-user")
+        label.login-form__label.login-form__label_text
+          input(data-content="Введите пароль" placeholder="Пароль" type="password" datacheck="password" name="password" class="input input_text")
+          span(class="fa fa-key" id="password")
+        label.login-form__label.login-form__label_checkbox
+          input(data-content="Роботам здесь не место!" type="checkbox" name="robot_check" value="not a robot" class="input input_checkbox")
+          span Я человек
+        p.login-form__plain-text Вы точно не робот?
+        label.login-form__label.login-form__label_radio
+          input(data-content="Роботам здесь не место!" type="radio" name="radio-btn" value="shure" class="input input_radio")
+          span Да
+        label.login-form__label.login-form__label_radio
+          input(type="radio" name="radio-btn" value="who knows" class="input input_radio")
+          span Не уверен
+      ul.welcome__banner_list
+        li.welcome__banner_item.welcome__banner_item--index
+          button(id="unflip-card" type="reset" target="_blank").welcome__banner_link На главную
+        li.welcome__banner_item.welcome__banner_item--enter
+          button.welcome__banner_link(id="Submit") Войти

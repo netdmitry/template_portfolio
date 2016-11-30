@@ -1,0 +1,22 @@
+extends ../_template
+
+block variables
+	- var title = 'Мои работы'
+
+block content
+	include ../common/menu
+	include ../common/_header
+	svg.triangle__big(preserveAspectRatio="none" viewbox=" 0 0 2000 400")
+		use(xlink:href="assets/img/sprite.svg#bg")
+	.header__title
+		.svg_heading
+			h1.svg-heading__text Мои работы
+			svg.svg-heading__img
+				use(xlink:href="assets/img/sprite.svg#works_header")
+	include ../common/slider-portf
+	include ../common/what-about
+	include ../common/footer
+	//- include ../common/slider
+
+
+	

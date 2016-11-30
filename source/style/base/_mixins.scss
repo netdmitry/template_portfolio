@@ -1,0 +1,88 @@
+@mixin roboto($style : regular) {
+    @if $style == regular {
+        font-family: 'Roboto-Regular', Arial, sans-serif;
+    }
+
+    @if $style == bold {
+        font-family: 'Roboto-Bold', Arial, sans-serif;
+    }
+
+    @if $style == light {
+        font-family: 'Roboto-Light', Arial, sans-serif;
+    }
+
+    @if $style == medium {
+        font-family: 'Roboto-Medium', Arial, sans-serif;
+    }
+}
+
+@mixin sansus($style : regular) {
+    @if $style == regular {
+        font-family: 'SansusWebissimo', Arial, sans-serif;
+    }
+}
+
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+// ===== placeholder color =====
+@mixin placecolor($color: #5f5f5f) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+
+// ===== calculate to Rem =====
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+
+}
+
+
+@mixin tablets {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+
+@mixin phones {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}

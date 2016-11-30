@@ -1,0 +1,19 @@
+button.welcome_btn(id="flip-card") Авторизоваться
+
+.flip-container.focus
+	.flipper
+		.back
+			.welcome__banner
+				include ../common/_my-card
+			  
+				include ../common/_socials
+				ul.welcome__banner_list
+					li.welcome__banner_item.welcome__banner_item--work
+						a(href="/my-works.html").welcome__banner_link Мои работы
+					li.welcome__banner_item.welcome__banner_item--about
+						a(href="/about_me.html").welcome__banner_link Обо мне
+					li.welcome__banner_item.welcome__banner_item--blog
+						a(href="/blog.html").welcome__banner_link Блог
+			
+		.front
+			include welcome-back

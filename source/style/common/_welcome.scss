@@ -1,0 +1,441 @@
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.card_flipped .welcome-header__button {
+  &:active {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+@keyframes bg {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-3056px, 0, 0);
+  }
+}
+
+.welcome {
+    background: #d7bf9b url("../img/bg_welcome.png") no-repeat 50% fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    position: fixed;
+    background-size: cover;
+}
+
+ #pixie{position:fixed;}
+
+.welcome_btn {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  padding: 10px 27px;
+  transition: all .5s;
+  color: $t-light;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: transparent;
+  z-index: 9999;
+
+  @include roboto(medium);
+  @include font-size(16px);
+  &:hover {
+    transition: all .5s;
+    color: #e7a731;
+    background-color: #fff;
+  }
+  @include laptop() {
+    top: 13px;
+    right: 0;
+    left: 84%;
+  }
+  @include tablets {
+    // left: 73%;
+    left: 35%;
+    top: 35px;
+  }
+  @include phones {
+    left: 27%;
+    top: 11px;
+    padding: 9px 11px;
+  }
+}
+.welcome__banner {
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 380px;
+  max-height: 395px;
+  padding: 40px 10px 50px 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(160, 129, 82, 0.5);
+  z-index: 3;
+   @include phones {
+    width: 88%;
+    height: 53%;
+  }
+  .socials__list {
+    float: none;
+    transform: translate(-6%, 0);
+    margin-bottom: 38px;
+    
+
+  .social__svg {
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+      fill: #fff;
+
+    }
+  }
+
+  }
+  &_list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    @include clearfix;
+  }
+  &_item {
+    position: relative;
+    float: left;
+    list-style: none;
+    transition: all .5s;
+    background-color: #e7a731;
+    &--work {
+      width: 40%;
+      border-right: 2px solid #e1c58c;
+      @include phones {
+        width: 40%;
+        border-right: 3px solid #e1c58c;
+      }
+    }
+    &--about {
+      width: 34%;
+      border-right: 2px solid #e1c58c;
+       @include phones {
+        width: 33%;
+        border-right: 3px solid #e1c58c;
+      }
+    }
+    &--index {
+      width: 49%;
+      border-right: 1px solid #e1c58c;
+    }
+    &--enter {
+      width: 50.5%;
+    }
+    &--blog {
+      width: 25%;
+       @include phones {
+        width: 25%;
+      }
+    }
+    &:hover {
+      transition: all .5s;
+      background-color: #cd8920;
+    }
+  }
+  &_link {
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: $t-light;
+    cursor: pointer;
+    width: 100%;
+    
+
+
+    @include roboto(medium);
+    @include font-size(16px);
+    &:hover {
+      color: $t-light;
+    }
+  }
+}
+
+/*    Back - начало        */
+
+.login-form {
+  margin: 0;
+  padding: 0px 20px 30px;
+  position: relative;
+}
+.sidestripes {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "SansusWebissimo";
+  max-width: 320px;
+  margin: 0 auto;
+  &.two-dot {
+    &:after {
+     right: 15px;
+     opacity: 0.5;
+      }
+    &:before {
+      left: 15px;
+      opacity: 0.5;
+    }
+  }
+
+}
+
+.login-form__label {
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-form__label_text {
+    position: relative;
+    display: block;
+}
+
+.login-form .input_text {
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 46px;
+    margin: 20px auto;
+    padding: 0px 30px 0px 45px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+// .input::before {
+//     margin-right: 0px;
+//     cursor: pointer;
+//     content: '';
+//     display: inline-block;
+//     vertical-align: text-bottom;
+//     width: 20px;
+//     height: 20px;
+//     background-color: #000;
+//     border-radius: 2px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
+// }
+// .input_checkbox::before {
+//   background-color: orange;
+  
+// }
+
+.input:checked {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.164' height='13.922'%3E%3Cpath fill='%23fff' d='M17.836 3.516L9.352 12l-1.594 1.594c-.21.21-.504.328-.797.328s-.584-.117-.795-.328L4.57 12 .328 7.758C.118 7.548 0 7.254 0 6.96s.117-.585.328-.796L1.922 4.57c.21-.21.504-.328.797-.328s.584.117.795.328L6.96 8.027l7.69-7.7c.21-.21.502-.327.795-.327s.586.117.797.328l1.594 1.594c.21.21.328.504.328.797s-.117.584-.328.795z'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+
+.login-form .input_text+span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    font-size: 1.125em;
+    line-height: 45px;
+    color: #c4cbcd;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #f0efe9;
+    transition: background-color .3s;
+}
+
+.login-form__label_radio {
+    display: inline-block;
+    margin: 0 20px;
+    color: #fff;
+}
+
+
+/*    Back - конец         */
+
+
+.page-footer {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  .copyright {
+    margin-top: -50px;
+    width: 100%;
+    opacity: 1;
+    font-weight: 400;
+  }
+}
+
+.hidden {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+
+
+
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+  /* flip the pane when hovered */
+  .flip-container:focus .flipper, .flip-container.focus .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 100%;
+  height: 100%;
+}
+
+/* flip speed goes here */
+.flipper {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+
+
+
+.login-form__plain-text {
+  color: #fff;
+}
+
+
+
+
+.radio-btn input[type="radio"], .check-box input[type="checkbox"] {
+    visibility: hidden;
+}
+
+/*Custom radio button*/
+ .radio-btn {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    margin: 0px 7px 0 0;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px #ccc;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+.checkedRadio {
+    -moz-box-shadow: inset 0 0 5px 1px #ccc;
+    -webkit-box-shadow: inset 0 0 5px 1px #ccc;
+    box-shadow: inset 0 0 5px 1px #ccc;
+}
+.radio-btn i {
+    border: 1px solid #E1E2E4;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.checkedRadio i {
+    background-color: orange;
+}
+
+
+
+.login-form .input_checkbox {
+    position: absolute;
+    opacity: 0;
+    outline: none;
+    visibility: hidden;
+}
+.login-form .input_checkbox+span::before {
+    content: "\f00c";
+    color: orange;
+    font-family: "FontAwesome";
+    line-height: 20px;
+    font-size: .75em;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 3px;
+    background-color: orange;
+    transition: all .3s;
+}
+.login-form .input_checkbox:checked+span::before {
+    color: #fff;
+}
+.input_text+span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    font-size: 1.125em;
+    line-height: 45px;
+    color: #c4cbcd;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #f0efe9;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
